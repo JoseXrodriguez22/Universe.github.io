@@ -1,0 +1,282 @@
+/*-----------------------------------*\
+  # WEBSITE DESIGN SOLAR SYSTEM
+\*-----------------------------------*/
+/**
+ * copyright 2022 Jose-Guillermo
+ */
+
+/*-----------------------------------*\
+  # GOOGLE FONTS
+\*-----------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+
+/*-----------------------------------*\
+  # RESET
+\*-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+body {
+  min-height: 2000px;
+}
+
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+/*-----------------------------------*\
+  # CUSTOM PROPERTIES
+\*-----------------------------------*/
+:root {
+  /* === COLOR=== */
+  --main-color: #007ce9;
+  --color-h1: #fff;
+  --color-h2: #fff;
+  --color-p: rgb(253, 252, 252);
+  /* === FONTS SIZE === */
+  --ft-h1: 4rem;
+  --ft-h2: 3rem;
+  --ft-h3: 2rem;
+  --ft-h4: 1.8rem;
+  --ft-span: 1.1rem;
+  --ft-p: 1rem;
+  /* === FONT WEIGHT === */
+  --fw-7: 700;
+  --fw-8: 800;
+}
+
+/*-----------------------------------*\
+  # REUSED STYLE
+\*-----------------------------------*/
+a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: var(--fw-7);
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+p {
+  font-size: var(--ft-p);
+  color: var(--color-p);
+  line-height: 1.7;
+}
+
+.title {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title h2 {
+  color: var(--color-h2);
+  font-size: var(--ft-h2);
+}
+
+.title p {
+  width: 50%;
+}
+
+.section__pictures {
+  padding-top: 120px;
+}
+
+button {
+  padding: 18px 30px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all .4s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*-----------------------------------*\
+  # NAV
+\*-----------------------------------*/
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: all .4s;
+}
+
+nav.nav__active {
+  background-color: #000;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.267);
+}
+
+.navigation {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.menu a {
+  margin: 3rem;
+  transition: all .4s;
+}
+
+.menu a:hover {
+  color: blue;
+}
+
+.menu i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/*-----------------------------------*\
+  # HEADER
+\*-----------------------------------*/
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/background.png) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title {
+  position: absolute;
+  font-size: var(--ft-h1);
+  color: var(--color-h1);
+}
+
+.header__title h1 {
+  text-shadow: 0 1pc 10px rgba(0, 0, 0, 0.371);
+}
+
+/*-----------------------------------*\
+  # PICTURE
+\*-----------------------------------*/
+.cards__picture {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.picture {
+  width: 360px;
+  height: 480px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------*\
+  # HISTORY
+\*-----------------------------------*/
+.section__history {
+  padding-top: 120px;
+}
+
+.history {
+  padding-top: 5rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history__info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.history__info p {
+  width: 90%;
+}
+
+.history__info h3 {
+  color: #fff;
+  font-size: var(--ft-h3);
+}
+
+.history__picture {
+  width: 50%;
+}
+
+.history__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------*\
+  # LINKS
+\*-----------------------------------*/
+.section__link {
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*-----------------------------------*\
+  # FOOTER
+\*-----------------------------------*/
+footer {
+  padding-top: 60px;
+  margin-top: 8rem;
+  border-top: 1px solid #fefefe;
+}
+
+.footer {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
